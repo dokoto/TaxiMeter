@@ -1,7 +1,17 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+define(['app', 'modules/meter/fare/meter_fare_view'], function (TAXI, FareView) {
+    'use strict';
+
+    TAXI.module('Meter.Fare', function (Fare, TAXI, Backbone, Marionette) {
+        var FareController = Marionette.Controller.extend({
+            show: function () {    
+                Fare.show();          
+            }
+        });
+
+        Fare.Controller = new FareController();
+    });
+
+    return TAXI.Meter.Fare.Controller;
+});
 
 

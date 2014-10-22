@@ -3,7 +3,7 @@ define(['app' ], function (TAXI) {
 
     var MeterRouter = Marionette.AppRouter.extend({
         appRoutes: {
-            "meter/fare/init": "initFareMeter",
+            "meter/fare/init": "showFareMeter",
             "meter/fare/stop": "stopFareMeter",
             "meter/ride/show": "showRide"
         },

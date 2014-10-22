@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.btn-circle.btn-xl { 
+    width: 200px;
+    height: 200px;        
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 100px;
+}
+
+.row-display {
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;  
+    margin-top:10%;
+    font-size: 28px
+}
+
+
+.row-controls {
+    text-align: center;
+}
+
+

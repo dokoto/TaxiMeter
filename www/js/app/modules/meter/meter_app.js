@@ -1,11 +1,11 @@
-define(['app', './builds_router'], function (TAXI, FareRouter) {
+define(['app', './meter_router'], function (TAXI, FareRouter) {
     'use strict';
 
-    OPV_CP.module('MeterPModule', function (Fare, TAXI) {
+    TAXI.module('MeterPModule', function (Fare, TAXI) {
         Fare.Router = FareRouter;
 
         var API = {
-            initFareMeter: function () {
+            showFareMeter: function () {
                 require(['MeterPModule/fare/meter_fare_controller'], function (FareController) {
                     logger.MSG_DESP('Loading Fare Meter Tool');
                     TAXI.navigate('builds/fare');
@@ -24,8 +24,8 @@ define(['app', './builds_router'], function (TAXI, FareRouter) {
 
         };
 
-        TAXI.on('meter:fare:init', function () {
-            API.initFareMeter();
+        TAXI.on('meter:fare:show', function () {
+            API.showFareMeter();
         });
 
         TAXI.on('builds:fare:stop', function () {

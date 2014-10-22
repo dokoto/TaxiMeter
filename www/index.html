@@ -8,12 +8,21 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- VENDOR CSS -->
+        <link href="js/vendor/css/bootstrap.min.css" rel="stylesheet">
+        <link href="js/vendor/css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- APP CSS -->
+        <link href="css/index.css" rel="stylesheet">
+
     </head>
     <body>
-        <div id="container">
-
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
+        <div id="header-region"></div>
+        <div id="container-region" class="container"></div>
+        <div id="footer-region"></div>
+        <div id="popups-region"></div>
+        
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script data-main="js/app/config" src="js/app/globals/logger.js"></script>
         <script data-main="js/app/config" src="js/vendor/js/require.js"></script> 
     </body>

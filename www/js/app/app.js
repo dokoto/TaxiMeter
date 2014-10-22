@@ -4,6 +4,13 @@ define(['marionette', 'backbone', './app_router'], function (Marionette, Backbon
     var TAXI = new Marionette.Application();
     TAXI.Router = AppRouter;
 
+TAXI.addRegions({
+        headerRegion: '#header-region',
+        containerRegion: '#container-region',
+        footerRegion: '#footer-region',
+        popupsRegion: '#popups-region'
+    });
+
     TAXI.on('start', function () {
         logger.APP_TITLE('Livware - Test - TaxiMeter');
 

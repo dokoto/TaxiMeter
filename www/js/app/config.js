@@ -3,6 +3,7 @@ requirejs.config({
         backbone: '../vendor/js/backbone-min',
         marionette: '../vendor/js/backbone.marionette.min',
         underscore: '../vendor/js/underscore-min',
+        bootstrap: '../vendor/js/bootstrap.min',
         text: '../vendor/js/text',
         tpl: '../vendor/js/underscore-tpl',
         jquery: '../vendor/js/jquery',
@@ -19,6 +20,9 @@ requirejs.config({
         marionette: {
             deps: ['backbone'],
             exports: 'Marionette'
+        },
+        bootstrap: {
+            deps: ['jquery']
         },
         tpl: ['text']
     },
@@ -50,9 +54,10 @@ requirejs.onResourceLoad = function (context, map, depMaps) {
 define(['app'], function (TAXI) {
     'use strict';
     
-    document.addEventListener('deviceready', function() {
+    //document.addEventListener('deviceready', function() {
+        logger.MSG_DESP('Device ready to start');
         TAXI.start();
-    });
+    //});
 });
 
 
