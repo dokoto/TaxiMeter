@@ -14,11 +14,11 @@ define(['app', './meter_router'], function (TAXI, FareRouter) {
             },
             stopFareMeter: function () {
             },
-            showRide: function () {
+            showRide: function (coors) {
                 require(['MeterPModule/ride/meter_ride_controller'], function (RideController) {
                     logger.MSG_DESP('Loading Ride Reporting Tool');
                     TAXI.navigate('builds/ride');
-                    RideController.show();
+                    RideController.show(coors);
                 });
             }
 
@@ -28,12 +28,12 @@ define(['app', './meter_router'], function (TAXI, FareRouter) {
             API.showFareMeter();
         });
 
-        TAXI.on('builds:fare:stop', function () {
+        TAXI.on('meter:fare:stop', function () {
             API.stopFareMeter();
         });
 
-        TAXI.on('builds:ride:show', function () {
-            API.showRide();
+        TAXI.on('meter:ride:show', function (coors) {
+            API.showRide(coors);
         });
 
         TAXI.addInitializer(function () {

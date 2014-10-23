@@ -39,6 +39,10 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		C20BDBF1AD384FD4AD93BE96 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D9365FCF48465DAAF32895 /* CDVLocation.m */; };
 		8DA77F28C6DE44C688E943E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFCD244A2E543349E41511C /* CoreLocation.framework */; };
+		0D29823C078649048A3DC847 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBE8BC5AED94FCCA088D203 /* CDVDevice.m */; };
+		8D41E469CFC74187818C3625 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 87894339184E463986455B4E /* CDVNotification.m */; };
+		D1875B79B4C64CA4BC27E7C9 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26D83C51C1504EFFA846C1A5 /* CDVNotification.bundle */; };
+		A33FB19222E24E40A7A28475 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB5E3BFC16C41659FEAA039 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,12 @@
 		49D9365FCF48465DAAF32895 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		B85A848BCF174FF5BD2EDD7A /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		DBFCD244A2E543349E41511C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		BEBE8BC5AED94FCCA088D203 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		5E6007FA2F4E4C41A874655F /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		87894339184E463986455B4E /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		88EA912D4B944F949503B441 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		26D83C51C1504EFFA846C1A5 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
+		3BB5E3BFC16C41659FEAA039 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				8DA77F28C6DE44C688E943E4 /* CoreLocation.framework in Frameworks */,
+				A33FB19222E24E40A7A28475 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +209,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* TaxiMeter-Info.plist */,
+				26D83C51C1504EFFA846C1A5 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = "TaxiMeter/Resources";
@@ -210,6 +222,7 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				DBFCD244A2E543349E41511C /* CoreLocation.framework */,
+				3BB5E3BFC16C41659FEAA039 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +240,10 @@
 			children = (
 				49D9365FCF48465DAAF32895 /* CDVLocation.m */,
 				B85A848BCF174FF5BD2EDD7A /* CDVLocation.h */,
+				BEBE8BC5AED94FCCA088D203 /* CDVDevice.m */,
+				5E6007FA2F4E4C41A874655F /* CDVDevice.h */,
+				87894339184E463986455B4E /* CDVNotification.m */,
+				88EA912D4B944F949503B441 /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = "TaxiMeter/Plugins";
@@ -390,6 +407,7 @@
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				D1875B79B4C64CA4BC27E7C9 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +440,8 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				C20BDBF1AD384FD4AD93BE96 /* CDVLocation.m in Sources */,
+				0D29823C078649048A3DC847 /* CDVDevice.m in Sources */,
+				8D41E469CFC74187818C3625 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

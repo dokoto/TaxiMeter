@@ -2,11 +2,22 @@
 <widget id="com.livware.test.taxi" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TaxiMeter</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Test for Livware. Made for Manuel Alfaro Sierra
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="manuel.alfaro.sierra@gmail.com" href="http://cordova.io">
+        Manuel
     </author>
+    
+    <preference name="phonegap-version"  value="3.6.3" /> 
+    <preference name="orientation"  value="portrait" /> 
+    <preference name="target-device" value="universal" /> 
+    <preference name="android-minSdkVersion" value="14" /> 
+    <preference name="android-maxSdkVersion" value="19" />  
+    
+    <feature name="Geolocation">
+    	<param name="ios-package" value="CDVLocation" />
+	</feature>
+    
     <content src="index.html" />
     <access origin="*" />
 </widget>

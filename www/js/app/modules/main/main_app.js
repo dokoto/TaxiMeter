@@ -1,15 +1,15 @@
 define(['app', './main_router'], function (TAXI, MainRouter) {
     'use strict';
 
-    TAXI.module('MainLModule', function (Main, OPV_CP) {
+    TAXI.module('MainLModule', function (Main, TAXI) {
         Main.Router = MainRouter;
 
         var API = {
             showMain: function () {
                 require(['MeterPModule'], function () {
                     logger.MSG_DESP('Loading TaxiMeter');
-                    OPV_CP.navigate('main');
-                    OPV_CP.trigger('meter:fare:show');
+                    TAXI.navigate('main');
+                    TAXI.trigger('meter:fare:show');
                 });
             }
         };

@@ -3,7 +3,7 @@ define(['app', 'modules/meter/fare/meter_fare_view'], function (TAXI, FareView) 
 
     TAXI.module('Meter.Fare', function (Fare, TAXI, Backbone, Marionette) {
         var FareController = Marionette.Controller.extend({
-            show: function () {    
+            show: function () {                 
                 Fare.show();          
             }
         });
