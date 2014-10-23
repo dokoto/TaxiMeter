@@ -174,6 +174,8 @@ define(['app', 'bootstrap', 'underscore',
                              
                              TAXI.trigger('meter:ride:show', coords);
                              */
+                            if (Fare.coords.length === 0)
+                                alert("Geopositional datas hasn't been recorded, maybe GPS is off or if GPS is on need more time get signal ?");
                             TAXI.trigger('meter:ride:show', Fare.coords);
                         },
                         handleMater: function (event)
@@ -181,6 +183,8 @@ define(['app', 'bootstrap', 'underscore',
                             event.preventDefault();
                             var status = $('.btn-default').attr('data-status');
                             if (status === 'start') {
+                                Fare.beginAt = 0;
+                                Fare.coords = [];
                                 $('.display-fare').text('0.000 £');
                                 $('.display-fare').attr('data-fare', '0.000');
                                 $('.btn-default').text('STOP');
