@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.livware.test.taxi" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <name>TaxiMeter</name>
+    <description>
+        Test for Livware. Made for Manuel Alfaro Sierra
+    </description>
+    <author email="manuel.alfaro.sierra@gmail.com" href="http://cordova.io">
+        Manuel
+    </author>
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-maxSdkVersion" value="19" />
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
